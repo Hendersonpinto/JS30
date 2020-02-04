@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Drum kit</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main">
+        <div class="keys-wrapper">
+            <div class="key"  data-key="KeyA" >
+                <div class="kbd">A</div class="kbd">
+                <span class="sound">CLAP</span>
+            </div>
+            <div class="key" data-key="KeyS">
+                <div class="kbd" >S</div>
+                <span class="sound">HIHAT</span>
+            </div> 
+            <div class="key" data-key="KeyD">
+                <div class="kbd" >D</div>
+                <span class="sound">KICK</span>
+            </div> 
+            <div class="key" data-key="KeyF">
+                <div class="kbd" >F</div>
+                <span class="sound">OPENHAT</span>
+            </div> 
+            <div class="key" data-key="KeyG">
+                <div class="kbd" >G</div>
+                <span class="sound">BOOM</span>
+            </div> 
+            <div class="key" data-key="KeyH">
+                <div class="kbd" >H</div>
+                <span class="sound">RIDE</span>
+            </div> 
+            <div class="key" data-key="KeyJ">
+                <div class="kbd" >J</div>
+                <span class="sound">SNARE</span>
+            </div> 
+            <div class="key" data-key="KeyK">
+                <div class="kbd" >K</div>
+                <span class="sound">TOM</span>
+            </div> 
+            <div class="key" data-key="KeyL">
+                <div class="kbd" >L</div>
+                <span class="sound">TINK</span>
+            </div>
+        </div>
+    </div>
+
+    <audio data-key="KeyA" src="sounds/clap.wav"></audio>
+    <audio data-key="KeyS"src="sounds/hihat.wav"></audio>
+    <audio data-key="KeyD"src="sounds/kick.wav"></audio>
+    <audio data-key="KeyF"src="sounds/openhat.wav"></audio>
+    <audio data-key="KeyG"src="sounds/boom.wav"></audio>
+    <audio data-key="KeyH"src="sounds/ride.wav"></audio>
+    <audio data-key="KeyJ"src="sounds/snare.wav"></audio>
+    <audio data-key="KeyK"src="sounds/tom.wav"></audio>
+    <audio data-key="KeyL"src="sounds/tink.wav"></audio>
+    
+    <script src="logic.js"></script>
+</body>
+</html>
