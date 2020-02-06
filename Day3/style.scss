@@ -1,0 +1,34 @@
+:root {
+    --base: #ffc600;
+    --spacing: 10px;
+    --blur: 1px;
+    --scaling: 1;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    min-height: 100vh;
+    background-color: #193549;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+
+    .controls {
+        margin-bottom: 50px;
+
+
+    }
+
+    img {
+        padding: var(--spacing);
+        background-color: var(--base);
+        filter: blur(var(--blur));
+        transform: scale(var(--scaling));
+    }
+
+    .title {
+        color: var(--base)
+    }
+
+}
