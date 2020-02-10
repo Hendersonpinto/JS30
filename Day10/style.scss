@@ -1,0 +1,60 @@
+html {
+    box-sizing: border-box;
+    background: #ffc600;
+    font-family: sans-serif;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #ffc600;
+}
+
+.list {
+    width: 40%;
+    margin: 100px auto;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 10px 10px 2px rgba(0, 0, 0, 0.1);
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 2px solid #F1F1F1;
+
+        p {
+            flex: 1;
+            margin: 0px;
+            padding: 20px;
+            border-left: 1px solid #D1E2FF;
+
+            &.crossed {
+                // I DO NOT NEED THIS CLASS ANYMORE BECAUSE I USED ADJACENT SIBLING SELECTOR '+'
+                background-color: #F5F5F5;
+                text-decoration: line-through;
+            }
+        }
+
+        &:last-child {
+            border-bottom: 0px;
+        }
+    }
+
+    &__input {
+        margin: 20px;
+        background-color: red;
+        border-bottom: 1px solid #F1F1F1;
+
+        &:checked+p {
+            background-color: #F5F5F5;
+            text-decoration: line-through;
+        }
+    }
+}
