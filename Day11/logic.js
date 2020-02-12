@@ -54,6 +54,7 @@ function openScreen() {
         /* IE/Edge */
         video.msRequestFullscreen();
     }
+    video.addEventListener(('click'), togglePlay);
 
 }
 
