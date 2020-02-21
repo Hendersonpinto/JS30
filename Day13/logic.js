@@ -1,12 +1,14 @@
 const images = document.querySelectorAll('img');
+const button = document.querySelector('button');
+const lastP = document.querySelector('.lastp');
 
 // THIS IS A DEBOUNCE FUNCTION SO THAT OUR SCROLL EVENT IS NOT TRIGGERED SO OFTEN
 function debounce(func, wait = 10, immediate = true) {
 	var timeout;
-	return function() {
+	return function () {
 		var context = this,
 			args = arguments;
-		var later = function() {
+		var later = function () {
 			timeout = null;
 			if (!immediate) func.apply(context, args);
 		};
@@ -38,4 +40,14 @@ function checkSlide() {
 	});
 }
 
+function scrollDown(event) {
+	console.log(`the last p is at ${lastP.offsetTop}`)
+	window.scroll({
+		top: lastP.offsetTop,
+		left: 0,
+		behavior: 'smooth'
+	});
+}
+
 window.addEventListener('scroll', debounce(checkSlide));
+button.addEventListener('click', scrollDown);
